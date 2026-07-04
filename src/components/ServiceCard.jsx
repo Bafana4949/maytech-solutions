@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const ServiceCard = ({ icon: Icon, title, description, features = [] }) => {
   return (
-    <div className="bg-white dark:bg-slate-700 rounded-xl shadow-sm border border-gray-100 dark:border-gray-600 p-8 hover:shadow-lg hover:border-primary-blue/30 dark:hover:border-accent-blue/50 transition-all duration-300 group flex flex-col h-full transform hover:-translate-y-1 relative overflow-hidden">
+    <div className="bg-white dark:bg-slate-700 rounded-xl shadow-sm border border-gray-100 dark:border-gray-600 p-6 sm:p-8 hover:shadow-lg hover:border-primary-blue/30 dark:hover:border-accent-blue/50 transition-all duration-300 group flex flex-col h-full transform hover:-translate-y-1 relative overflow-hidden">
       {/* Decorative top gradient line */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-blue to-accent-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       
@@ -25,10 +26,10 @@ const ServiceCard = ({ icon: Icon, title, description, features = [] }) => {
           </li>
         ))}
       </ul>
-      <a href="#contact" className="inline-flex items-center text-sm font-semibold text-primary-blue dark:text-accent-blue hover:text-blue-700 dark:hover:text-blue-400 transition-colors mt-auto">
+      <Link to="/contact" className="inline-flex items-center justify-start py-2 -ml-2 pl-2 text-sm font-semibold text-primary-blue dark:text-accent-blue hover:text-blue-700 dark:hover:text-blue-400 transition-colors mt-auto">
         Request service
         <ArrowRight className="ml-1 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-      </a>
+      </Link>
     </div>
   );
 };

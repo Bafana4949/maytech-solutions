@@ -1,43 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
-import darkLogo from '../logos/darkmode_logo.jpeg';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 import lightLogo from '../logos/horizontal_logo.jpeg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    const storedTheme = localStorage.getItem('theme');
-    const isDark = storedTheme === 'dark';
-    setIsDarkMode(isDark);
-    if (isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = !isDarkMode;
-    setIsDarkMode(newTheme);
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Packages', href: '#packages' },
-    { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About', href: '/about' },
+    { name: 'Portfolio', href: '/portfolio' },
+    { name: 'Packages', href: '/packages' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -45,52 +26,38 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <a href="#home" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img 
-                src={isDarkMode ? darkLogo : lightLogo} 
+                src={lightLogo} 
                 alt="MayTech Solutions Logo" 
-                className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105"
+                className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105"
               />
-            </a>
+            </Link>
           </div>
           <div className="hidden md:flex items-center space-x-6">
             <div className="flex items-baseline space-x-2">
               {navLinks.map((link) => (
-                <a
+                <NavLink
                   key={link.name}
-                  href={link.href}
-                  className="relative group text-primary-navy dark:text-gray-300 hover:text-primary-blue dark:hover:text-accent-cyan px-3 py-2 text-sm font-semibold transition-colors duration-300"
+                  to={link.href}
+                  className={({ isActive }) => 
+                    `relative group px-3 py-2 text-sm font-semibold transition-colors duration-300 ${isActive ? 'text-primary-blue dark:text-accent-cyan' : 'text-primary-navy dark:text-gray-300 hover:text-primary-blue dark:hover:text-accent-cyan'}`
+                  }
                 >
                   {link.name}
                   <span className="absolute left-0 right-0 -bottom-1 h-[2px] bg-primary-blue dark:bg-accent-cyan transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
-                </a>
+                </NavLink>
               ))}
             </div>
             
-            <a 
-              href="#contact"
+            <Link 
+              to="/contact"
               className="hidden lg:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg text-white bg-primary-blue hover:bg-blue-700 transition-colors shadow-sm"
             >
               Get a Quote
-            </a>
-
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-blue"
-              aria-label="Toggle Dark Mode"
-              title="Toggle Dark Mode"
-            >
-              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </button>
+            </Link>
           </div>
           <div className="flex items-center md:hidden space-x-2">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none"
-              aria-label="Toggle Dark Mode"
-            >
-              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
@@ -108,28 +75,30 @@ const Navbar = () => {
       {/* Mobile menu */}
       <div 
         id="mobile-menu"
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white dark:bg-primary-navy border-t border-gray-100 dark:border-gray-800 ${
-          isOpen ? 'max-h-96 opacity-100 shadow-lg' : 'max-h-0 opacity-0'
+        className={`md:hidden transition-all duration-300 ease-in-out bg-white dark:bg-primary-navy border-t border-gray-100 dark:border-gray-800 ${
+          isOpen ? 'max-h-[80vh] opacity-100 shadow-lg overflow-y-auto' : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navLinks.map((link) => (
-            <a
+            <NavLink
               key={link.name}
-              href={link.href}
-              className="hover:bg-blue-50 dark:hover:bg-slate-800 hover:text-primary-blue dark:hover:text-accent-cyan block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              to={link.href}
+              className={({ isActive }) => 
+                `block px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive ? 'bg-blue-50 dark:bg-slate-800 text-primary-blue dark:text-accent-cyan' : 'text-primary-navy dark:text-white hover:bg-blue-50 dark:hover:bg-slate-800 hover:text-primary-blue dark:hover:text-accent-cyan'}`
+              }
               onClick={() => setIsOpen(false)}
             >
               {link.name}
-            </a>
+            </NavLink>
           ))}
-          <a
-            href="#contact"
-            className="block w-full text-center mt-4 px-4 py-2 text-base font-semibold rounded-lg text-white bg-primary-blue hover:bg-blue-700 transition-colors"
+          <Link
+            to="/contact"
+            className="block w-full text-center mt-4 px-4 py-3 text-base font-semibold rounded-lg text-white bg-primary-blue hover:bg-blue-700 transition-colors"
             onClick={() => setIsOpen(false)}
           >
             Get a Quote
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

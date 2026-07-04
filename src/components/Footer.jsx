@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../logos/darkmode_logo.jpeg';
 
 const Footer = () => {
@@ -25,7 +26,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer ref={footerRef} className="border-t border-gray-800 text-white pt-16 pb-8 transition-colors duration-300 relative overflow-hidden z-0" style={{ backgroundColor: '#0B1120' }}>
+    <footer ref={footerRef} className="border-t border-gray-800 text-white pt-12 sm:pt-16 pb-8 transition-colors duration-300 relative overflow-hidden z-0" style={{ backgroundColor: '#0B1120' }}>
       
       {/* Background Logo Watermark */}
       <div 
@@ -39,7 +40,7 @@ const Footer = () => {
       ></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           
           <div className="lg:col-span-1">
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -50,13 +51,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 tracking-wide uppercase text-sm">Quick Links</h3>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><a href="#home" className="hover:text-primary-blue transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-primary-blue transition-colors">About</a></li>
-              <li><a href="#services" className="hover:text-primary-blue transition-colors">Services</a></li>
-              <li><a href="#portfolio" className="hover:text-primary-blue transition-colors">Portfolio</a></li>
-              <li><a href="#packages" className="hover:text-primary-blue transition-colors">Packages</a></li>
-              <li><a href="#faq" className="hover:text-primary-blue transition-colors">FAQ</a></li>
-              <li><a href="#contact" className="hover:text-primary-blue transition-colors">Contact</a></li>
+              <li><Link to="/" className="hover:text-primary-blue transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-primary-blue transition-colors">About</Link></li>
+              <li><Link to="/services" className="hover:text-primary-blue transition-colors">Services</Link></li>
+              <li><Link to="/portfolio" className="hover:text-primary-blue transition-colors">Portfolio</Link></li>
+              <li><Link to="/packages" className="hover:text-primary-blue transition-colors">Packages</Link></li>
+              <li><Link to="/faq" className="hover:text-primary-blue transition-colors">FAQ</Link></li>
+              <li><Link to="/contact" className="hover:text-primary-blue transition-colors">Contact</Link></li>
             </ul>
           </div>
 

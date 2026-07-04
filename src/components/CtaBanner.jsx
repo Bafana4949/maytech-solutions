@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 import TechBackground from './graphics/TechBackground';
 
@@ -23,13 +24,13 @@ const CtaBanner = ({ title, subtitle }) => {
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0">
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-bold rounded-lg text-primary-blue bg-white hover:bg-gray-50 hover:scale-105 shadow-lg hover:shadow-xl transition-all duration-300"
           >
             Get a Free Quote
             <ArrowRight className="ml-2 w-5 h-5" />
-          </a>
+          </Link>
           <a
             href="https://wa.me/27660179070"
             target="_blank"

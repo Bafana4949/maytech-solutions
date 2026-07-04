@@ -56,7 +56,7 @@ const ITSupportServices = () => {
   ];
 
   return (
-    <section id="it-support-services" className="py-20 bg-background-light dark:bg-slate-900 transition-colors duration-300 relative">
+    <section id="it-support-services" className="py-16 lg:py-24 bg-background-light dark:bg-slate-900 transition-colors duration-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="text-3xl font-extrabold text-primary-navy dark:text-white sm:text-4xl">
@@ -72,7 +72,7 @@ const ITSupportServices = () => {
             const Icon = category.icon;
             return (
               <AnimatedSection key={index} delay={index * 150} className="h-full">
-                <div className="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-sm border border-gray-100 dark:border-slate-700 h-full hover:shadow-md transition-shadow duration-300">
+                <div className="bg-white dark:bg-slate-800 rounded-xl p-6 sm:p-8 shadow-sm border border-gray-100 dark:border-slate-700 h-full hover:shadow-md transition-shadow duration-300">
                   <div className="flex items-center mb-6 border-b border-gray-100 dark:border-slate-700 pb-4">
                     <div className={`p-3 rounded-xl bg-gray-50 dark:bg-slate-700 mr-4 ${category.color}`}>
                       <Icon className="w-8 h-8" />

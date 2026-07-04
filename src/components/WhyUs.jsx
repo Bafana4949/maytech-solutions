@@ -1,10 +1,11 @@
 import React from 'react';
-import { Target, Heart, Layers, Settings, ShieldCheck, Lock } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Target, Heart, Layers, Settings, ShieldCheck, Lock, ArrowRight } from 'lucide-react';
 import TechBackground from './graphics/TechBackground';
 import SectionDivider from './graphics/SectionDivider';
 import AnimatedSection from './animations/AnimatedSection';
 
-const WhyUs = () => {
+const WhyUs = ({ limit }) => {
   const reasons = [
     {
       title: 'Affordable Solutions',
@@ -53,7 +54,7 @@ const WhyUs = () => {
         </AnimatedSection>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => (
+          {(limit ? reasons.slice(0, limit) : reasons).map((reason, index) => (
             <AnimatedSection key={index} delay={index * 150} className="h-full">
               <div className="h-full bg-slate-900 rounded-xl p-8 border border-slate-800 hover:border-slate-700 transition-all duration-300 hover:bg-slate-800/80 group relative overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transform translate-x-4 -translate-y-4 group-hover:scale-110 transition-all duration-500">
@@ -69,6 +70,18 @@ const WhyUs = () => {
             </AnimatedSection>
           ))}
         </div>
+        
+        {limit && (
+          <div className="mt-12 text-center">
+            <Link 
+              to="/about" 
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-white bg-slate-800 border border-slate-700 hover:border-primary-blue hover:bg-slate-700 transform hover:-translate-y-1 transition-all duration-300 shadow-sm"
+            >
+              Learn More About Us
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+        )}
       </div>
       
       <SectionDivider fillClass="fill-background-light dark:fill-slate-900" />

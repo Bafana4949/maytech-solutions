@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Check, ArrowRight } from 'lucide-react';
 import SectionDivider from './graphics/SectionDivider';
 import AnimatedSection from './animations/AnimatedSection';
@@ -99,7 +100,7 @@ const Packages = () => {
   ];
 
   return (
-    <section id="packages" className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300 relative">
+    <section id="packages" className="py-16 lg:py-24 bg-white dark:bg-slate-800 transition-colors duration-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-extrabold text-primary-navy dark:text-white sm:text-4xl">
@@ -116,11 +117,11 @@ const Packages = () => {
               <div 
                 className={`h-full bg-background-light dark:bg-slate-900 rounded-2xl shadow-sm border ${
                   pkg.isPopular ? 'border-primary-blue shadow-primary-blue/20 dark:shadow-primary-blue/10 transform md:-translate-y-2' : 'border-gray-100 dark:border-gray-700 hover:-translate-y-1'
-                } p-8 flex flex-col relative transition-all duration-300 hover:shadow-md`}
+                } p-6 sm:p-8 flex flex-col relative transition-all duration-300 hover:shadow-md`}
               >
                 {pkg.isPopular && (
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <span className="bg-primary-blue text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">
+                  <div className="mb-4">
+                    <span className="inline-flex bg-primary-blue text-white text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">
                       Most Popular
                     </span>
                   </div>
@@ -138,8 +139,8 @@ const Packages = () => {
                   ))}
                 </ul>
                 
-                <a 
-                  href="#contact" 
+                <Link 
+                  to="/contact" 
                   className={`w-full mt-auto flex items-center justify-center py-3 px-4 rounded-lg font-semibold transition-colors duration-300 ${
                     pkg.isPopular 
                       ? 'bg-primary-blue text-white hover:bg-blue-700' 
@@ -148,7 +149,7 @@ const Packages = () => {
                 >
                   {pkg.buttonText}
                   <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </AnimatedSection>
           ))}

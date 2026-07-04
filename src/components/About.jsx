@@ -7,8 +7,8 @@ import AnimatedSection from './animations/AnimatedSection';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-background-light dark:bg-slate-900 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-16 lg:py-24 bg-background-light dark:bg-slate-900 transition-colors duration-300 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <AnimatedSection animation="animate-[fade-in-left_0.8s_ease-out_forwards]" className="mb-12 lg:mb-0">
             <h2 className="inline-block text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-navy to-primary-blue dark:from-white dark:to-accent-blue sm:text-4xl mb-6 pb-1">
@@ -43,12 +43,12 @@ const About = () => {
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-visible p-4 transition-colors duration-300 relative z-10">
               
 
-              <div className="relative group overflow-hidden rounded-xl bg-gray-50 dark:bg-slate-700/50">
+              <div className="relative group overflow-hidden rounded-xl bg-gray-50 dark:bg-slate-700/50 max-w-sm mx-auto w-full">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-blue/20 to-accent-blue/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 <img 
                   src={founderPortraitImg} 
                   alt="Bafana May Bhuda, Founder and Lead Developer of MayTech Solutions" 
-                  className="w-full h-[320px] sm:h-[400px] lg:h-[450px] object-contain rounded-xl transform group-hover:scale-[1.03] transition-transform duration-700 relative z-0" 
+                  className="w-full h-auto object-contain max-h-[350px] sm:max-h-[400px] lg:max-h-[450px] rounded-xl transform group-hover:scale-[1.03] transition-transform duration-700 relative z-0" 
                 />
               </div>
               <div className="text-center mt-6 pb-2 relative z-20 bg-white dark:bg-slate-800 rounded-lg">

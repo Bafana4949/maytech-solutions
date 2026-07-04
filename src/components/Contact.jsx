@@ -28,7 +28,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background-light dark:bg-slate-900 transition-colors duration-300 relative">
+    <section id="contact" className="py-16 lg:py-24 bg-background-light dark:bg-slate-900 transition-colors duration-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-extrabold text-primary-navy dark:text-white sm:text-4xl">Get In Touch</h2>
@@ -40,7 +40,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <AnimatedSection animation="animate-[fade-in-left_0.8s_ease-out_forwards]">
-            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-8 transition-colors duration-300 relative overflow-hidden group">
+            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 p-6 sm:p-8 transition-colors duration-300 relative overflow-hidden group">
               
               {/* Decorative background icon */}
               <MessageCircle className="absolute -bottom-10 -right-10 w-48 h-48 text-primary-blue/5 dark:text-accent-blue/5 transform group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-700 pointer-events-none" />
@@ -90,7 +90,7 @@ const Contact = () => {
           
           {/* Contact Form */}
           <AnimatedSection animation="animate-[fade-in-right_0.8s_ease-out_forwards]">
-            <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-700 transition-colors duration-300">
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 dark:border-gray-700 transition-colors duration-300">
               {isSubmitted ? (
                 <div className="h-full flex flex-col items-center justify-center py-16 text-center animate-fade-in-up">
                   <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-6 shadow-sm border border-green-200 dark:border-green-800">

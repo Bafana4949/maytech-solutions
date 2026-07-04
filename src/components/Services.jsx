@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import ServiceCard from './ServiceCard';
 import { Monitor, Server, Smartphone, Database, Headphones, Laptop, Globe, Cpu } from 'lucide-react';
 import SectionDivider from './graphics/SectionDivider';
 import AnimatedSection from './animations/AnimatedSection';
 
-const Services = () => {
+const Services = ({ limit }) => {
   const services = [
     {
       title: 'Website Development',
@@ -57,8 +58,8 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-16 lg:py-24 bg-white dark:bg-slate-800 transition-colors duration-300 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-extrabold text-primary-navy dark:text-white sm:text-4xl">
             Our Main Services
@@ -69,7 +70,7 @@ const Services = () => {
         </AnimatedSection>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+          {(limit ? services.slice(0, limit) : services).map((service, index) => (
             <AnimatedSection key={index} delay={index * 100} className="h-full">
               <ServiceCard 
                 title={service.title}
@@ -80,6 +81,17 @@ const Services = () => {
             </AnimatedSection>
           ))}
         </div>
+        
+        {limit && (
+          <div className="mt-12 text-center">
+            <Link 
+              to="/services" 
+              className="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-primary-navy dark:text-white bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-700 hover:border-primary-blue dark:hover:border-accent-cyan hover:bg-gray-50 dark:hover:bg-slate-700 transform hover:-translate-y-1 transition-all duration-300 shadow-sm"
+            >
+              View All Services
+            </Link>
+          </div>
+        )}
       </div>
       
       <SectionDivider fillClass="fill-gray-50 dark:fill-slate-900" />

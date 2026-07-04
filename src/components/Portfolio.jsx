@@ -83,7 +83,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-background-light dark:bg-slate-900 transition-colors duration-300 relative">
+    <section id="portfolio" className="py-16 lg:py-24 bg-background-light dark:bg-slate-900 transition-colors duration-300 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-extrabold text-primary-navy dark:text-white sm:text-4xl">

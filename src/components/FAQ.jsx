@@ -6,7 +6,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <div className="border border-gray-200 dark:border-slate-700 rounded-lg mb-4 overflow-hidden bg-white dark:bg-slate-800 transition-colors duration-300">
       <button
-        className="w-full px-6 py-4 flex justify-between items-center bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors duration-300"
+        className="w-full px-4 sm:px-6 py-4 flex justify-between items-center bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors duration-300"
         onClick={onClick}
       >
         <span className="font-semibold text-primary-navy dark:text-white text-left">{question}</span>
@@ -21,7 +21,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-6 pb-5 text-text-muted dark:text-gray-300">
+        <div className="px-4 sm:px-6 pb-5 text-text-muted dark:text-gray-300">
           {answer}
         </div>
       </div>
@@ -68,7 +68,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-background-light dark:bg-slate-900 transition-colors duration-300 border-t border-gray-100 dark:border-slate-800">
+    <section id="faq" className="py-16 lg:py-24 bg-background-light dark:bg-slate-900 transition-colors duration-300 border-t border-gray-100 dark:border-slate-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl font-extrabold text-primary-navy dark:text-white sm:text-4xl mb-4">
