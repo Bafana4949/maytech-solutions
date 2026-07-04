@@ -1,6 +1,6 @@
 import React from 'react';
 import AnimatedSection from './animations/AnimatedSection';
-import { Laptop, Smartphone, Wifi, Monitor, ShieldCheck, Mail, Settings, HardDrive, Wrench, Camera } from 'lucide-react';
+import { Laptop, Smartphone, Wifi, Monitor, ShieldCheck } from 'lucide-react';
 import SectionDivider from './graphics/SectionDivider';
 
 const ITSupportServices = () => {
@@ -26,7 +26,7 @@ const ITSupportServices = () => {
         'Slow phone troubleshooting',
         'App setup',
         'Email setup',
-        'Account recovery guidance*'
+        'General usage assistance'
       ]
     },
     {
@@ -51,18 +51,6 @@ const ITSupportServices = () => {
         'Printer setup',
         'Video meeting setup',
         'Basic security setup'
-      ]
-    },
-    {
-      title: 'CCTV Installation & Repair',
-      icon: Camera,
-      color: 'text-red-500',
-      points: [
-        'CCTV camera installation',
-        'Camera system repairs',
-        'DVR/NVR setup',
-        'Remote viewing setup (Phone/PC)',
-        'System maintenance'
       ]
     }
   ];
@@ -94,7 +82,7 @@ const ITSupportServices = () => {
                   <ul className="space-y-4">
                     {category.points.map((point, i) => (
                       <li key={i} className="flex items-start">
-                        <ShieldCheck className="w-5 h-5 text-accent-blue mr-3 flex-shrink-0 mt-0.5" />
+                        <ShieldCheck className="w-5 h-5 text-accent-cyan mr-3 flex-shrink-0 mt-0.5" />
                         <span className="text-text-muted dark:text-gray-300 font-medium">{point}</span>
                       </li>
                     ))}
@@ -106,9 +94,10 @@ const ITSupportServices = () => {
         </div>
 
         <AnimatedSection delay={600} className="text-center">
-          <div className="inline-block bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800/30 rounded-lg px-6 py-4 max-w-3xl">
-            <p className="text-sm text-yellow-800 dark:text-yellow-200 font-medium">
-              * <strong>Security Notice:</strong> Account recovery and device access support is only provided for verified owners. We prioritize digital safety and do not offer services for bypassing security locks on unauthorized devices.
+          <div className="inline-block bg-primary-navy/5 dark:bg-slate-800 border border-primary-navy/10 dark:border-slate-700 rounded-lg px-6 py-4 max-w-3xl">
+            <p className="text-sm text-primary-navy dark:text-gray-300 font-medium flex items-center justify-center">
+              <ShieldCheck className="w-4 h-4 mr-2 text-primary-blue dark:text-accent-cyan" />
+              Account recovery and device access support for verified owners only.
             </p>
           </div>
         </AnimatedSection>

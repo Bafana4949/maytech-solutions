@@ -1,19 +1,18 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import Services from './components/Services';
 import ITSupportServices from './components/ITSupportServices';
-import TechnicalExpertise from './components/TechnicalExpertise';
+import WhatWeCanBuild from './components/WhatWeCanBuild';
 import Portfolio from './components/Portfolio';
 import HowItWorks from './components/HowItWorks';
 import WhyUs from './components/WhyUs';
 import Packages from './components/Packages';
-import AreasWeServe from './components/AreasWeServe';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
-import MeetFounder from './components/MeetFounder';
 
 function App() {
   return (
@@ -22,21 +21,18 @@ function App() {
       
       <main className="flex-grow">
         <Hero />
+        <About />
         <Services />
         <ITSupportServices />
-        <TechnicalExpertise />
+        <WhatWeCanBuild />
         <Portfolio />
         <HowItWorks />
         <WhyUs />
         <Packages />
-        <AreasWeServe />
         <FAQ />
-        
-
         <Contact />
       </main>
       
-      <MeetFounder />
       <Footer />
       <WhatsAppButton />
     </div>

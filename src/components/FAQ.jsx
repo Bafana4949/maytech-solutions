@@ -62,7 +62,7 @@ const FAQ = () => {
       answer: 'It depends on what you need. Most of our projects are a once-off fee. However, if you need us to host your website, manage your professional emails, or provide ongoing monthly IT support, we offer affordable monthly packages.'
     },
     {
-      question: 'Do you work with clients outside Witbank?',
+      question: 'Do you work with clients outside Pretoria and Witbank?',
       answer: 'Yes! While we are based in South Africa and support local communities in Gauteng and Mpumalanga, we provide remote services like website development and software building to clients anywhere.'
     }
   ];

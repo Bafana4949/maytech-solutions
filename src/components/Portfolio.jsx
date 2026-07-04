@@ -1,8 +1,7 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import { Scissors, ShoppingCart, GraduationCap, Building2, Bot } from 'lucide-react';
+import { Scissors, ShoppingCart, GraduationCap, Building2, Server } from 'lucide-react';
 import imgApplyAssist from '../project pictures/ApplyAssistSA.png';
-import imgCareerGuide from '../project pictures/CareerGuide.png';
 import imgWeighTruck from '../project pictures/WeighTruck.png';
 import imgWitbankKota from '../project pictures/Witbank King Kota.png';
 import SectionDivider from './graphics/SectionDivider';
@@ -10,20 +9,6 @@ import AnimatedSection from './animations/AnimatedSection';
 
 const Portfolio = () => {
   const projects = [
-    {
-      title: 'CareerGuide AI',
-      description: 'An AI-integrated platform helping learners make informed career choices. Students can complete personality quizzes and chat with an AI assistant to discover tailored courses, careers, learnerships, bursaries, and universities.',
-      category: 'AI Application',
-      status: 'Live Demo',
-      icon: Bot,
-      bgGradient: 'from-blue-600 to-indigo-600',
-      image: imgCareerGuide,
-      mockupType: 'website',
-      techStack: ['AI Integration', 'React', 'JavaScript'],
-      liveLink: 'https://career-compass-sa-main.vercel.app/',
-      problem: 'Learners struggle to find suitable career paths, learnerships, and bursaries based on their personal strengths.',
-      solution: 'Personality quizzes and an AI chatbot that recommend tailored courses, careers, and universities.'
-    },
     {
       title: 'WeighTruck — Tonnage Tracking & Compliance SaaS',
       description: 'A logistics compliance system designed to manage tonnage tracking, axle weight validation, safety induction checks, medical expiry validation, and weighbridge reconciliation.',
@@ -33,7 +18,7 @@ const Portfolio = () => {
       bgGradient: 'from-blue-500 to-cyan-500',
       image: imgWeighTruck,
       mockupType: 'inventory',
-      techStack: ['Java', 'Spring Boot', 'Spring Data JPA', 'PostgreSQL', 'TypeScript'],
+      techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'TypeScript'],
       githubLink: 'https://github.com/Bafana4949/WeightTruck',
       liveLink: 'https://weight-truck.vercel.app/',
       problem: 'Manual and error-prone tracking of truck tonnage, compliance expirations, and safety inductions.',
@@ -73,7 +58,7 @@ const Portfolio = () => {
       description: 'A Java concurrency project simulating synchronized banking transactions using thread coordination and locking to prevent race conditions.',
       category: 'Backend System',
       status: 'Source Code',
-      icon: Building2,
+      icon: Server,
       bgGradient: 'from-emerald-500 to-teal-500',
       image: 'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       mockupType: 'inventory',

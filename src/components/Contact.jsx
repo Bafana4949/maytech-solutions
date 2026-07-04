@@ -176,7 +176,6 @@ const Contact = () => {
                         <option value="WiFi Troubleshooting">WiFi Troubleshooting</option>
                         <option value="Home Office Setup">Home Office Setup</option>
                         <option value="Device Setup">Device Setup</option>
-                        <option value="CCTV Installation & Repair">CCTV Installation & Repair</option>
                         <option value="IT Support">IT Support</option>
                         <option value="Hosting & Email Setup">Hosting & Email Setup</option>
                         <option value="Business Automation">Business Automation</option>

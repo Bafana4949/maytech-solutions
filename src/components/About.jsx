@@ -1,7 +1,7 @@
 import React from 'react';
-import { CheckCircle2, Code, Database, Smartphone, Wrench } from 'lucide-react';
-import founderImg from '../pictures of me/WhatsApp Image 2026-06-29 at 16.01.43.jpeg';
-import FloatingBadge from './graphics/FloatingBadge';
+import { CheckCircle2 } from 'lucide-react';
+import founderPortraitImg from '../pictures of me/WhatsApp Image 2026-06-29 at 16.01.43.jpeg';
+
 import SectionDivider from './graphics/SectionDivider';
 import AnimatedSection from './animations/AnimatedSection';
 
@@ -42,17 +42,12 @@ const About = () => {
           <AnimatedSection animation="animate-[fade-in-right_0.8s_ease-out_forwards]" delay={200} className="relative mt-8 lg:mt-0">
             <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-visible p-4 transition-colors duration-300 relative z-10">
               
-              {/* Floating Badges */}
-              <FloatingBadge icon={Code} text="Full-Stack Dev" className="-top-4 -left-4 sm:-left-8 z-20 hover:scale-110 transition-transform" delay="0s" />
-              <FloatingBadge icon={Database} text="Database Systems" className="top-1/4 -right-4 sm:-right-8 z-20 hover:scale-110 transition-transform" delay="0.5s" />
-              <FloatingBadge icon={Smartphone} text="Mobile Apps" className="bottom-1/4 -left-4 sm:-left-8 z-20 hover:scale-110 transition-transform" delay="1s" />
-              <FloatingBadge icon={Wrench} text="IT Support" className="-bottom-4 -right-4 sm:-right-8 z-20 hover:scale-110 transition-transform" delay="1.5s" />
-              
+
               <div className="relative group overflow-hidden rounded-xl bg-gray-50 dark:bg-slate-700/50">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-blue/20 to-accent-blue/20 mix-blend-overlay z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 <img 
-                  src={founderImg} 
-                  alt="Bafana May Bhuda" 
+                  src={founderPortraitImg} 
+                  alt="Bafana May Bhuda, Founder and Lead Developer of MayTech Solutions" 
                   className="w-full h-[320px] sm:h-[400px] lg:h-[450px] object-contain rounded-xl transform group-hover:scale-[1.03] transition-transform duration-700 relative z-0" 
                 />
               </div>

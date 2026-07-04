@@ -9,17 +9,19 @@ export default {
     extend: {
       colors: {
         primary: {
-          navy: '#0F172A',
-          blue: '#2563EB',
+          navy: '#0B1120',
+          blue: '#1D4ED8', // Royal-like blue
         },
         accent: {
+          cyan: '#06B6D4',
           blue: '#38BDF8',
         },
         background: {
           light: '#F8FAFC',
+          grey: '#F3F4F6',
         },
         text: {
-          dark: '#111827',
+          dark: '#0F172A',
           muted: '#64748B',
         }
       }

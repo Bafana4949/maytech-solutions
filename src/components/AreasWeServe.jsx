@@ -13,7 +13,7 @@ const AreasWeServe = () => {
           <div>
             <h2 className="text-2xl font-bold text-primary-navy dark:text-white mb-2">Areas We Serve</h2>
             <p className="text-lg text-text-muted dark:text-gray-300">
-              MayTech Solutions provides local support to clients in <strong className="text-primary-navy dark:text-gray-100">Witbank/eMalahleni, Mpumalanga, and Gauteng</strong>, while also serving businesses across South Africa <strong className="text-primary-blue dark:text-accent-blue">remotely</strong>.
+              MayTech Solutions supports clients in <strong className="text-primary-navy dark:text-gray-100">Pretoria, Witbank/eMalahleni, Mpumalanga, Gauteng</strong>, and across South Africa <strong className="text-primary-blue dark:text-accent-blue">remotely</strong>.
             </p>
           </div>
         </AnimatedSection>

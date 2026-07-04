@@ -1,6 +1,6 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
-import { Monitor, Server, Headphones, Globe } from 'lucide-react';
+import { Monitor, Server, Smartphone, Database, Headphones, Laptop, Globe, Cpu } from 'lucide-react';
 import SectionDivider from './graphics/SectionDivider';
 import AnimatedSection from './animations/AnimatedSection';
 
@@ -10,25 +10,49 @@ const Services = () => {
       title: 'Website Development',
       description: 'Professional, responsive websites designed to attract clients and grow your business.',
       icon: Monitor,
-      features: ['Custom modern designs', 'Fully mobile responsive', 'SEO optimization']
+      features: ['Custom modern designs', 'Mobile responsive', 'SEO optimized']
     },
     {
-      title: 'Custom Business Systems',
-      description: 'Tailored software systems and databases to streamline your specific operations.',
+      title: 'Business Systems',
+      description: 'Tailored software systems to streamline your specific operations.',
       icon: Server,
       features: ['Automated workflows', 'Secure data management', 'Custom reporting']
     },
     {
-      title: 'Practical IT Support',
-      description: 'Reliable technical help for your devices, WiFi, and home office setups.',
-      icon: Headphones,
-      features: ['Device troubleshooting', 'WiFi & network setup', 'Software installation']
+      title: 'Mobile App Development',
+      description: 'User-friendly mobile applications for Android and iOS devices.',
+      icon: Smartphone,
+      features: ['Native performance', 'Intuitive design', 'Offline capabilities']
     },
     {
-      title: 'Hosting & Professional Email',
+      title: 'Database Solutions',
+      description: 'Reliable database design and management for your business data.',
+      icon: Database,
+      features: ['Data structuring', 'Performance tuning', 'Backup systems']
+    },
+    {
+      title: 'IT Support',
+      description: 'Reliable technical help to keep your business running smoothly.',
+      icon: Headphones,
+      features: ['Remote assistance', 'System troubleshooting', 'Software installation']
+    },
+    {
+      title: 'Device & Home Office Support',
+      description: 'Practical support for your laptops, cellphones, and home office setups.',
+      icon: Laptop,
+      features: ['Device setup', 'Performance tuning', 'Peripheral connections']
+    },
+    {
+      title: 'Hosting & Email Setup',
       description: 'Secure website hosting and custom @yourdomain emails for your business.',
       icon: Globe,
-      features: ['Fast loading servers', 'Business email setup', 'Daily backups']
+      features: ['Fast servers', 'Business email setup', 'Domain management']
+    },
+    {
+      title: 'Business Automation',
+      description: 'Replace manual tasks with automated processes to save time.',
+      icon: Cpu,
+      features: ['Email automation', 'Data syncing', 'Workflow optimization']
     }
   ];
 
